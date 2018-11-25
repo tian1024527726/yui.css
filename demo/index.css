@@ -1,0 +1,124 @@
+html {
+  font-size: 16px;
+}
+
+section + hr {
+  margin: 2rem;
+  height: 2px;
+}
+
+.demo-section {
+  margin: 1rem auto;
+  width: 1194px;
+}
+
+.demo-section > .demo-content {
+  font-size: 0.875rem;
+  margin: 1rem;
+  background: white;
+}
+
+.demo-section > .demo-content > div {
+  width: 49.5%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.demo-section > .demo-content > div:last-child {
+  width: 50%;
+  border: 1px solid #f9b6b6;
+  padding: 0rem 3rem 1rem 1rem;
+  background-color: #e2d6f2;
+}
+
+.demo-section > .demo-content > div:last-child > iframe {
+  width: 23.4375rem;
+  height: 34.25rem;
+  border: none;
+  box-shadow: 0 0 1px 0 grey;
+}
+
+.demo-section > .demo-content > div:last-child > iframe html {
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.demo-section > .demo-content > div.mobile-demo {
+  width: 25.4375rem;
+  height: 32rem;
+  background-color: #f9f9f9;
+  padding: 0 1rem 1rem;
+}
+
+.demo-section > .demo-content > div:last-child > span {
+  margin-right: 0.5rem;
+}
+
+.demo-section > .demo-content > div:last-child > span:not(:first-child),
+.demo-section > .demo-content > div:last-child > p:not(:first-child),
+.demo-section > .demo-content > div:last-child > div:not(:first-child) {
+  margin-top: 0.5rem;
+}
+
+.demo-section > .demo-content > div:last-child::before {
+  content: "示例";
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #f9b6b6;
+  border-radius: 3px 3px 0 0;
+  color: white;
+  font-size: 8px;
+  top: -5px;
+  left: -22px;
+  width: 36px;
+  letter-spacing: 1px;
+  padding: 3px 5px;
+  position: relative;
+  vertical-align: top;
+}
+
+.demo-section > .demo-content code {
+  background-color: whitesmoke;
+  color: #5c02b4;
+  font-size: 0.875rem;
+  font-weight: normal;
+  padding: 2px 5px;
+  margin: 0 1px;
+}
+
+.demo-section > .demo-content ul.demo-list {
+  padding: 0.5rem 1.5rem;
+  list-style: circle;
+}
+
+.demo-section > .demo-content li {
+  padding: 2px 0;
+}
+
+.demo-affix {
+  position: fixed;
+  top: 40%;
+  right: 2.375rem;
+  cursor: pointer;
+}
+
+.demo-affix > span {
+  display: block;
+  position: relative;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background-color: transparent;
+  border: solid 2px #ff6600;
+  margin: 1rem 0;
+}
+
+.demo-affix > span.active,
+.demo-affix > span:hover {
+  background-color: #ff6600;
+  transition: background-color .5s;
+}

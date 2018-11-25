@@ -1,0 +1,117 @@
+$col-pickerPrefixCls: 'ym-col-picker';
+$pickerPrefixCls: 'ym-picker';
+
+/*varible*/
+$col-picker-item-font-size: $size-normal;
+$col-picker-item-selected-font-size: $size-medium;
+$col-picker-item-color: #4A4A4A;
+$col-picker-mask-background-color: #F5F5F5;
+$col-picker-mask-border-color: #E5E5E5;
+$picker-header-title-color: #8A909A;
+$picker-header-cancelBtn-color: $primary;
+$picker-header-confirmBtn-color: $primary;
+$picker-header-button-active-background-color: #DDDDDD;
+
+//col-picker
+.#{$col-pickerPrefixCls}{
+  @include unselectable;
+  position: relative;
+  flex: 1;
+  height: 15rem;
+  overflow: hidden;
+  font-weight: 600;
+
+  &-content{
+    @include flex;
+    width: 100%;
+    background-color: #FFF;
+  }
+
+  &-scroll{
+    width: 100%;
+    margin: 6rem 0;
+    &-item{
+      @include text-ellipsis;
+      overflow: hidden;
+      width: 100%;
+      height: 3rem;
+      line-height: 3rem;
+      font-size: .875rem;
+      color: $col-picker-item-color;
+      text-align: center;
+      &.is-active{
+        font-size: 1rem;
+      }
+    }
+  }
+
+  &-mask-top,
+  &-mask-bottom{
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    width: 100%;
+    height: 6rem;
+    pointer-events: none;
+    transform: translateZ(0);
+    &:after{
+      content: '';
+      position: absolute;
+      left: 0;
+      display: block;
+      width: 100%;
+      border-bottom: 1px solid $col-picker-mask-border-color;
+    }
+  }
+
+  &-mask-top{
+    top: 0;
+    background: linear-gradient(to top, rgba($col-picker-mask-background-color, 0.4), rgba($col-picker-mask-background-color, 0.8)) ;
+    &:after{
+      bottom: 0;
+    }
+  }
+
+  &-mask-bottom{
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba($col-picker-mask-background-color, 0.4), rgba($col-picker-mask-background-color, 0.8)) ;
+    &:after{
+      top: 0;
+    }
+  }
+}
+
+//picker
+.#{$pickerPrefixCls}{
+
+  &-header{
+    @include flex;
+    justify-content: space-between;
+    height: 2.625rem;
+    line-height: 2.625rem;
+    &-button-active{
+      background-color: $picker-header-button-active-background-color;
+    }
+    &-cancelBtn{
+      font-size: .875rem;
+      font-weight: 600;
+      padding: 0 1rem;
+      color:$picker-header-cancelBtn-color;
+    }
+    &-title{
+      font-size: 1rem;
+      font-weight: 600;
+      color: $picker-header-title-color;
+    }
+    &-confirmBtn{
+      font-size: .875rem;
+      font-weight: 600;
+      padding: 0 1rem;
+      color:$picker-header-confirmBtn-color;
+    }
+  }
+
+  &-content{
+    @include flex;
+  }
+}

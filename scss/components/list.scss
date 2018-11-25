@@ -1,0 +1,83 @@
+// variables
+$list-header-color: $text;
+$list-body-background-color: $white;
+$list-background-color: $white;
+$list-item-color: $text;
+$list-footer-color: $text;
+$list-border-color: #E5E5E5;
+$list-item-active-background-color: #E5E5E5;
+
+
+.list {
+  background-color: $list-background-color;
+  border-top: 1px solid $list-border-color;
+  border-bottom: 1px solid $list-border-color;
+  > header {
+    font-size: 0.75rem;
+    padding-left: 1.125rem;
+    color: $list-header-color;
+    background: transparent;
+  }
+
+  >.list-body {
+    position: relative;
+    background: $list-body-background-color;
+    div {
+      &:not(:first-child){
+      .list-item{
+          &:before{
+            content: '';
+            position: absolute;
+            width: 100%;
+            width: calc(100% - 1.125rem);
+            height: 0;
+            border-top: 1px solid $list-border-color;
+            top: 0;
+            left: 1.125rem;
+          }
+        }
+      }
+    }
+    .list-item {
+      position: relative;
+      flex-basis: 0;
+      flex-grow: 1;
+      flex-shrink: 1;
+      font-size: 1rem;
+      padding-left: 1.125rem;
+      display: flex;
+      padding-right: 1rem;
+      vertical-align: middle;
+      align-items: center;
+      &-active{
+        background-color: $list-item-active-background-color;
+      }
+      &:not(:first-child){
+        &:before{
+          content: '';
+          position: absolute;
+          width: 100%;
+          width: calc(100% - 1.125rem);
+          height: 0;
+          border-top: 1px solid $list-border-color;
+          top: 0;
+          left: 1.125rem;
+        }
+      }
+    }
+  }
+  >header ~ .list-body{
+    .list-item {
+      &:before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        width: calc(100% - 1.125rem);
+        height: 0;
+        border-top: 1px solid $list-border-color;
+        top: 0;
+        left: 1.125rem;
+      }
+    }
+  }
+}

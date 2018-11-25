@@ -1,0 +1,233 @@
+$prefixCls: 'ym';
+
+@keyframes spinAround {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes customCursor {
+  0% {
+      opacity: 1;
+  }
+  50% {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes fadeEnter {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes ymSlideDownIn {
+  0% {
+    transform: translate(0, -100%);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes ymSlideDownOut {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(0, -100%);
+  }
+}
+
+@keyframes ymFadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes ymFadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes ymSlideUpIn {
+  0% {
+    transform: translate(0, 100%);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes ymSlideUpOut {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(0, 100%);
+  }
+}
+
+@keyframes ymZoomIn {
+  0% {
+    opacity: 0;
+    transform-origin: 50% 50%;
+    transform: scale(0, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform-origin: 50% 50%;
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes ymZoomOut {
+  0% {
+    opacity: 1;
+    transform-origin: 50% 50%;
+    transform: scale(1, 1);
+  }
+
+  100% {
+    opacity: 0;
+    transform-origin: 50% 50%;
+    transform: scale(0, 0);
+  }
+}
+
+.#{$prefixCls} {
+  @mixin effect {
+    animation-duration: .2s;
+    animation-fill-mode: both;
+    animation-timing-function: cubic-bezier(.55, 0, .55, .2);
+  }
+  &-fade-enter,
+  &-fade-appear {
+    opacity: 0;
+    @include effect;
+    animation-play-state: paused;
+  }
+
+  &-fade-leave {
+    @include effect;
+    animation-play-state: paused;
+  }
+
+  &-fade-enter.#{$prefixCls}-fade-enter-active,
+  &-fade-appear.#{$prefixCls}-fade-appear-active {
+    animation-name: ymFadeIn;
+    animation-play-state: running;
+  }
+
+  &-fade-leave.#{$prefixCls}-fade-leave-active {
+    animation-name: ymFadeOut;
+    animation-play-state: running;
+  }
+
+
+
+  &-slide-up-enter,
+  &-slide-up-appear {
+    transform: translate(0, 100%);
+  }
+
+  &-slide-up-enter,
+  &-slide-up-appear,
+  &-slide-up-leave {
+    @include effect;
+    animation-play-state: paused;
+  }
+  &-slide-up-enter.#{$prefixCls}-slide-up-enter-active,
+  &-slide-up-appear.#{$prefixCls}-slide-up-appear-active {
+    animation-name: ymSlideUpIn;
+    animation-play-state: running;
+  }
+
+  &-slide-up-leave,
+  &-slide-up-leave-active {
+    animation-name: ymSlideUpOut;
+    animation-play-state: running;
+  }
+
+  &.ym-zoom-enter,
+  &.ym-zoom-leave {
+    display: block;
+  }
+
+  &-zoom-enter,
+  &-zoom-appear {
+    opacity: 0;
+    @include effect;
+
+    animation-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
+    animation-play-state: paused;
+  }
+
+  &-zoom-leave {
+    @include effect;
+
+    animation-timing-function: cubic-bezier(0.6, -0.3, 0.74, 0.05);
+    animation-play-state: paused;
+  }
+
+  &-zoom-enter.#{$prefixCls}-zoom-enter-active,
+  &-zoom-appear.#{$prefixCls}-zoom-appear-active {
+    animation-name: ymZoomIn;
+    animation-play-state: running;
+  }
+
+  &-zoom-leave.#{$prefixCls}-zoom-leave-active {
+    animation-name: ymZoomOut;
+    animation-play-state: running;
+  }
+
+
+
+  &-slide-down-enter,
+  &-slide-down-appear {
+    transform: translate(0, -100%);
+  }
+
+  &-slide-down-enter,
+  &-slide-down-appear,
+  &-slide-down-leave {
+    @include effect;
+
+    animation-play-state: paused;
+  }
+
+  &-slide-down-enter.#{$prefixCls}-slide-down-enter-active,
+  &-slide-down-appear.#{$prefixCls}-slide-down-appear-active {
+    animation-name: ymSlideDownIn;
+    animation-play-state: running;
+  }
+
+  &-slide-down-leave.#{$prefixCls}-slide-down-leave-active {
+    animation-name: ymSlideDownOut;
+    animation-play-state: running;
+  }
+}

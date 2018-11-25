@@ -1,0 +1,128 @@
+// variables
+$input-item-color: $text;
+$input-item-disabled-color: $text-lighter;
+$input-addon-color: $text-lighter;
+$input-addon-active-color: $text-light;
+$input-border-color: #E5E5E5;
+.input {
+    @include unselectable;
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 3.375rem;
+    box-sizing: border-box;
+    align-items: center;
+    vertical-align: middle;
+    font-size: $size-medium;
+    .icon_warning,.icon_clean{
+      width: 1.2rem;
+      height: 1.2rem;
+      position: relative;
+      display: inline-flex;
+      background-size: 1.2rem;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+    }
+    .icon_warning {
+        width: 1.1rem;
+        height: 1.1rem;
+        background-size: 1.1rem;
+        background-image: url("data:image/svg+xml;charset=utf-8, %3Csvg%20width%3D%221024%22%20height%3D%221024%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Asvg%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20class%3D%22icon%22%3E%3Cg%3E%3Cpath%20transform%3D%22rotate(-180%20511.99996948242193%2C511.99999999999994)%20%22%20id%3D%22svg_1%22%20fill%3D%22%23ea473d%22%20d%3D%22m512%2C1019.65436c-281.16242%2C0%20-507.65436%2C-226.49195%20-507.65436%2C-507.65436s226.49195%2C-507.65436%20507.65436%2C-507.65436s507.65436%2C226.49195%20507.65436%2C507.65436s-226.49195%2C507.65436%20-507.65436%2C507.65436zm39.05034%2C-580.54832c0%2C-23.4302%20-15.62013%2C-39.05034%20-39.05034%2C-39.05034s-39.05034%2C15.62013%20-39.05034%2C39.05034l0%2C351.45302c0%2C23.4302%2015.62013%2C39.05034%2039.05034%2C39.05034s39.05034%2C-15.62013%2039.05034%2C-39.05034l0%2C-351.45302zm-36.44698%2C-182.23491c-23.4302%2C0%20-39.05034%2C15.62013%20-39.05034%2C39.05034s15.62013%2C39.05034%2039.05034%2C39.05034s39.05034%2C-15.62013%2039.05034%2C-39.05034s-15.62013%2C-39.05034%20-39.05034%2C-39.05034z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+        >.msg{
+          position: absolute;
+          top: 0;
+          right: -.4rem;
+          transform: translate(0,-111%);
+          border-radius: 4px;
+          font-size: .75rem;
+          color: #FFF;
+          background-color:#646464;
+          padding: .6rem 1rem;
+          line-height: 1;
+          white-space: nowrap;
+          &:before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: .45rem;
+            transform: translate(0, 75%);
+            width: 0;
+            height: 0;
+            border: .5rem solid #646464;
+            border-right: .5rem solid transparent;
+            border-left: .5rem solid transparent;
+            border-bottom: .5rem solid transparent;
+          }
+        }
+    }
+    .icon_clean {
+        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D%220%200%201024%201024%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20width%3D%22200%22%20height%3D%22200%22%3E%3Cpath%20d%3D%22M512%2064c-247.00852%200-448%20200.960516-448%20448S264.960516%20960%20512%20960c247.00852%200%20448-200.960516%20448-448S759.039484%2064%20512%2064zM694.752211%20649.984034c12.480043%2012.54369%2012.447359%2032.768069-0.063647%2045.248112-6.239161%206.208198-14.399785%209.34412-22.591372%209.34412-8.224271%200-16.415858-3.135923-22.65674-9.407768l-137.60043-138.016718-138.047682%20136.576912c-6.239161%206.14455-14.368821%209.247789-22.496761%209.247789-8.255235%200-16.479505-3.168606-22.751351-9.504099-12.416396-12.576374-12.320065-32.800753%200.25631-45.248112l137.887703-136.384249-137.376804-137.824056c-12.480043-12.512727-12.447359-32.768069%200.063647-45.248112%2012.512727-12.512727%2032.735385-12.447359%2045.248112%200.063647l137.567746%20137.984034%20138.047682-136.575192c12.54369-12.447359%2032.831716-12.320065%2045.248112%200.25631%2012.447359%2012.576374%2012.320065%2032.831716-0.25631%2045.248112L557.344443%20512.127295%20694.752211%20649.984034z%22%20p-id%3D%224366%22%20fill%3D%22%23cccccc%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E")
+    }
+    >.input-control{
+      flex: 1 1 0;
+      input{
+        background-color: transparent;
+        font-size: 1rem;
+        outline: none;
+        border: 0px;
+        line-height: 1.5;
+        width: 100%;
+        padding: .5rem 1rem .5rem 1rem;
+      }
+    }
+    >.input-content {
+        position: relative;
+        flex: 1 1 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 100%;
+        min-height: 2.5rem;
+        line-height: 1.5;
+        padding: .5rem 1rem .5rem 1rem;
+        >.input-placeholder {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translate(0,-50%);
+            width: 100%;
+            min-height: 2.5rem;
+            line-height: 1.5;
+            padding: .5rem 1rem .5rem 1rem;
+            color: #999;
+        }
+        &.is-focus {
+            &:after {
+                content: ' ';
+                position: relative;
+                z-index: 10;
+                right: 0;
+                top: 10%;
+                height: 2rem;
+                border-right: 2px solid #0677DA;
+                animation: customCursor 1s infinite step-start;
+            }
+        }
+    } // addon
+    >.input-group-add {
+        color: $input-item-color;
+        flex-shrink: 0;
+        font-size: 1rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+    // Modifiers
+    &[disabled] {
+        >label,
+        >input,
+        .input-group-add {
+            color: $input-item-disabled-color;
+        }
+    } //border
+    &.bordered {
+        border-top: 1px solid $input-border-color;
+        border-bottom: 1px solid $input-border-color;
+    }
+}
+

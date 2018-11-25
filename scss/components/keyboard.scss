@@ -1,0 +1,83 @@
+// variables
+$numeric-key-size: 1.75rem;
+$numeric-key-color: #030303;
+$numeric-key-active-background: #E5E5E5;
+$numeric-key-border-color: $background;
+$numeric-key-dark-background: #c6cbd4;
+$numeric-confirm-key-size: 1.25rem;
+
+// numeric keyboard
+.numeric-keyboard {
+  width: 100%;
+  height: 12.5rem;
+  background-color: white;
+  >table {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+
+    td {
+      width: 25%;
+      text-align: center;
+      vertical-align: middle;
+      color: $numeric-key-color;
+      font-size: $numeric-key-size;
+      border: 1px solid $numeric-key-border-color;
+      &:first-child {
+        border-left: 0;
+      }
+      &.key-delete,
+      &.key-close {
+        background-size: 2rem;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+      }
+
+      &.key-delete {
+        border-right: 0;
+        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D%220%200%201024%201024%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20width%3D%22200%22%20height%3D%22200%22%3E%3Cpath%20d%3D%22M875.593995%20186.122001l-484.791311%200c-13.570063%200-26.584472%205.390777-36.178991%2014.986319L79.908958%20475.821009c-9.595542%209.595542-14.986319%2022.60995-14.986319%2036.178991s5.390777%2026.584472%2014.986319%2036.178991l274.713712%20274.711665c9.595542%209.595542%2022.608927%2014.986319%2036.178991%2014.986319l484.791311%200c46.033429%200%2083.48439-37.449937%2083.48439-83.483366L959.077362%20269.606391C959.078385%20223.572962%20921.627425%20186.122001%20875.593995%20186.122001zM907.913075%20754.395656c0%2017.84953-14.471596%2032.318056-32.31908%2032.318056l-484.791311%200L116.088972%20512.001023%20390.802684%20237.287311l484.791311%200c17.848507%200%2032.31908%2014.46955%2032.31908%2032.31908L907.913075%20754.395656z%22%20p-id%3D%222466%22%3E%3C%2Fpath%3E%3Cpath%20d%3D%22M753.945401%20360.214015%20632.515794%20481.642598%20511.085164%20360.214015c0%200-16.061814-8.224312-30.356378%206.072299-14.294564%2014.294564-6.072299%2030.356378-6.072299%2030.356378l121.429607%20121.428583L486.800062%20627.357308c0%200-8.222265%2016.061814%206.072299%2030.356378%2014.296611%2014.296611%2030.357402%206.072299%2030.357402%206.072299l109.286032-109.285009%20109.286032%20109.285009c0%200%2016.061814%208.224312%2030.357402-6.072299%2014.294564-14.294564%206.070252-30.356378%206.070252-30.356378L668.944472%20518.072299%20790.375102%20396.642692c0%200%208.220219-16.061814-6.074346-30.356378C770.007215%20351.989703%20753.945401%20360.214015%20753.945401%20360.214015z%22%20p-id%3D%222467%22%20class%3D%22selected%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E");
+      }
+      &.key-close {
+        background-size: 1.8rem;
+        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%221416%22%20height%3D%221024%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Asvg%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20class%3D%22icon%22%3E%3Cg%20id%3D%22svg_2%22%3E%3Cpath%20d%3D%22m4.21399%2C-4.21399l1416.17021%2C0l0%2C849.70213l-1416.17021%2C0l0%2C-849.70213zm87.14894%2C87.14894l0%2C675.40425l1241.87234%2C0l0%2C-675.40425l-1241.87234%2C0zm130.7234%2C108.93617l108.93617%2C0l0%2C108.93617l-108.93617%2C0l0%2C-108.93617zm174.29787%2C0l108.93617%2C0l0%2C108.93617l-108.93617%2C0l0%2C-108.93617zm174.29787%2C0l108.93617%2C0l0%2C108.93617l-108.93617%2C0l0%2C-108.93617zm174.29788%2C0l108.93617%2C0l0%2C108.93617l-108.93617%2C0l0%2C-108.93617zm174.29787%2C0l108.93617%2C0l0%2C108.93617l-108.93617%2C0l0%2C-108.93617zm174.29787%2C0l108.93617%2C0l0%2C108.93617l-108.93617%2C0l0%2C-108.93617zm-784.34042%2C174.29787l108.93617%2C0l0%2C108.93617l-108.93617%2C0l0%2C-108.93617zm174.29787%2C0l108.93617%2C0l0%2C108.93617l-108.93617%2C0l0%2C-108.93617zm174.29787%2C0l108.93617%2C0l0%2C108.93617l-108.93617%2C0l0%2C-108.93617zm174.29787%2C0l108.93617%2C0l0%2C108.93617l-108.93617%2C0l0%2C-108.93617zm174.29788%2C0l108.93617%2C0l0%2C108.93617l-108.93617%2C0l0%2C-108.93617zm-784.34043%2C174.29787l108.93617%2C0l0%2C108.93617l-108.93617%2C0l0%2C-108.93617zm871.48936%2C0l108.93617%2C0l0%2C108.93617l-108.93617%2C0l0%2C-108.93617zm-697.19149%2C0l631.82979%2C0l0%2C108.93617l-631.82979%2C0l0%2C-108.93617zm196.08511%2C348.59575l261.44681%2C0l-130.72341%2C130.7234l-130.7234%2C-130.7234z%22%20fill%3D%22%232c2c2c%22%20id%3D%22svg_1%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+      }
+
+      &.key-confirm {
+        font-size: $numeric-confirm-key-size;
+        color: $primary-invert;
+        background-color: $primary;
+        border-right: 0;
+        &.is-active,
+        &:active {
+          background-color: darken($primary, 10%);
+        }
+
+        &.is-disabled,
+        &[disabled] {
+          background-color: rgba($primary, .64);
+          color: rgba(white, .64);
+
+          &.is-active,
+          &:active {
+            background-color: rgba($primary, .64);
+          }
+        }
+      }
+
+      &.is-darked {
+        background-color: $numeric-key-dark-background;
+
+        &.is-active,
+        &:active {
+          background-color: $numeric-key-dark-background;
+        }
+      }
+
+      &.is-active,
+      &:active {
+        background-color: $numeric-key-active-background;
+      }
+    }
+  }
+}

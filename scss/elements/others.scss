@@ -1,0 +1,23 @@
+.mask {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  tap-highlight-color: rgba(0, 0, 0, 0);
+  z-index: -1;
+  transition-property: transform, -webkit-transform;
+  transition: opacity .3s;
+
+  &.is-active {
+    opacity: 1;
+    z-index: 1023;
+  }
+
+  &.transparent {
+    background-color: transparent;
+  }
+}

@@ -1,0 +1,45 @@
+@import "../iconfonts/index";
+
+/* Variables */
+$icon-size-default: 1rem !default;
+$icon-size-xs: .75rem !default;
+$icon-size-s: 0.875rem !default;
+$icon-size-m: 1.25rem !default;
+$icon-size-l: 1.5rem !default;
+$icon-size-xl: 1.75rem !default;
+$icon-size-xxl: 1.875rem !default;
+$icon-size-xxxl: 2rem !default;
+$icon-sizes: ("xxxl": $icon-size-xxxl, "xxl": $icon-size-xxl, "xl": $icon-size-xl, "l": $icon-size-l,"m": $icon-size-m,"s": $icon-size-s, "xs": $icon-size-xs );
+
+.icon {
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  height: $icon-size-default;
+  width: $icon-size-default;
+
+  &:before {
+    font-size: $icon-size-default;
+    line-height: $icon-size-default;
+  }
+
+  /* Sizes */
+  @each $name, $size in $icon-sizes {
+    &.is-#{$name} {
+      height: $size;
+      width: $size;
+
+      &:before {
+        font-size: $size;
+        line-height: $size;
+      }
+    }
+  }
+
+  /* Colors */
+  @each $name, $pair in $colors {
+    &.is-#{$name} {
+      color: nth($pair, 1);
+    }
+  }
+}

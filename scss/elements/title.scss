@@ -1,0 +1,58 @@
+// Variables
+
+$title-color: $grey-darker !default;
+$title-size: $size-3 !default;
+$title-weight: $weight-semibold !default;
+$title-strong-color: inherit !default;
+$title-strong-weight: inherit !default;
+$title-sub-size: 0.75em !default;
+$title-sup-size: 0.75em !default;
+
+$title-font: "PingFangSC-Regular";
+$title-colors: ("white": $white, "black": $black) !default;
+
+.title {
+  color: $title-color;
+  font-family: $title-font;
+  font-size: $title-size;
+  font-weight: $title-weight;
+  line-height: 1.5;
+  word-break: break-word;
+
+  // Sizes
+  @each $size in $sizes {
+    $i: index($sizes, $size);
+    &.is-#{$i} {
+      font-size: $size;
+    }
+  }
+
+  // Colors
+  @each $name, $color in $title-colors {
+    &.is-#{$name} {
+      color: $color;
+    }
+  }
+
+  em,
+  span{
+    font-weight: inherit;
+  }
+
+  strong {
+    color: $title-strong-color;
+    font-weight: $title-strong-weight;
+  }
+
+  sub {
+    font-size: $title-sub-size;
+  }
+
+  sup {
+    font-size: $title-sup-size;
+  }
+
+  .tag {
+    vertical-align: middle;
+  }
+}

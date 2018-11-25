@@ -1,0 +1,350 @@
+// variables
+$tab-background-color: $white;
+$tab-filled-background-color: $primary;
+$tab-underline-color: $primary;
+$tab-filled-border-color: #E5E5E5;
+$tab-list-color: $text;
+$tab-list-shadow: inset 0 -1px 0 0 #D8DDE6;
+$tab-filled-list-shadow: inset 0 -.5px 0 0 #E5E5E5,inset 0 .5px 0 0 #E5E5E5;
+$tab-list-active-color: $primary;
+
+//colors
+$tab-list-active-colors: ('primary-blue': $primary-1, 'primary-oringe': $primary-2, 'primary-yellow': $primary-3, 'primary-purple': $primary-4, 'primary-green': $primary-5);
+$tab-filled-background-colors: ('primary-blue': $primary-1, 'primary-oringe': $primary-2, 'primary-yellow': $primary-3, 'primary-purple': $primary-4, 'primary-green': $primary-5);
+$tab-underline-colors: ('primary-blue': $primary-1, 'primary-oringe': $primary-2, 'primary-yellow': $primary-3, 'primary-purple': $primary-4, 'primary-green': $primary-5);
+
+//transition
+$tab-underline-easing-in-out: cubic-bezier(0.35, 0, 0.25, 1);
+$tab-underline-effect-duration: .3s;
+
+.tabs,
+.tabs-filled,
+.tabs-underline{
+  user-select: none;
+  background-color: $tab-background-color;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  // tab list
+  .tab-list {
+    @include unselectable;
+    position: relative;
+    height: 3.375rem;
+    color: $tab-list-color;
+    box-shadow: $tab-list-shadow;
+
+    ul {
+      @include flex;
+
+      li {
+        @include flex;
+        overflow: hidden;
+        padding: 0.625rem 0 0.5rem;
+        align-self: stretch;
+        align-items: center;
+        vertical-align: middle;
+        justify-content:center;
+        transform: perspective(1px) translateZ(0);
+        border-bottom: 2px solid transparent;
+        cursor: pointer;
+        text-align: center;
+        color: $tab-list-color;
+        line-height: 1.125rem;
+
+        * {
+          color: $tab-list-color;
+        }
+
+        &:before {
+          content: '';
+          position: absolute;
+          z-index: -1;
+          left: calc(50% - 8px);
+          right: 0;
+          bottom: 0;
+          width:0;
+          height:0;
+          border-left:5px solid transparent;
+          border-right:5px solid transparent;
+          border-bottom:6px solid $tab-list-active-color;
+          transform: translateY(6px);
+          transition-property: transform;
+          transition-duration: 0.2s;
+        }
+
+        // &:hover,
+        // &:active,
+        &.is-active {
+          color: $tab-list-active-color;
+          border-bottom-color: $tab-list-active-color;
+
+          * {
+            color: $tab-list-active-color;
+          }
+
+          &:before {
+            transform: translateY(0);
+          }
+        }
+      }
+    }
+  }
+
+  // tab panel
+  .tab-content {
+    height: auto;
+
+    .tab-pane {
+      display: none;
+
+      &.is-active {
+        display: block
+      }
+    }
+  }
+
+  @each $name, $color in $tab-list-active-colors{
+    .tab-list-#{$name} {
+      @include unselectable;
+      position: relative;
+      height: 3.375rem;
+      color: $tab-list-color;
+      box-shadow: $tab-list-shadow;
+
+      ul {
+        @include flex;
+
+        li {
+          @include flex;
+          overflow: hidden;
+          padding: 0.625rem 0 0.5rem;
+          align-self: stretch;
+          align-items: center;
+          vertical-align: middle;
+          justify-content:center;
+          transform: perspective(1px) translateZ(0);
+          border-bottom: 2px solid transparent;
+          cursor: pointer;
+          text-align: center;
+          color: $tab-list-color;
+          line-height: 1.125rem;
+
+          * {
+            color: $tab-list-color;
+          }
+
+          &:before {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            left: calc(50% - 8px);
+            right: 0;
+            bottom: 0;
+            width:0;
+            height:0;
+            border-left:5px solid transparent;
+            border-right:5px solid transparent;
+            border-bottom:6px solid $color;
+            transform: translateY(6px);
+            transition-property: transform;
+            transition-duration: 0.2s;
+          }
+
+          // &:hover,
+          // &:active,
+          &.is-active {
+            color: $color;
+            border-bottom-color: $color;
+
+            * {
+              color: $color;
+            }
+
+            &:before {
+              transform: translateY(0);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//filled
+.tabs-filled {
+
+  .tab-list{
+    box-shadow: $tab-filled-list-shadow;
+    ul{
+      li{
+        color: $tab-filled-background-color;
+        border-bottom: 0;
+
+        &:before {
+          border-bottom:6px solid #FFF;
+        }
+
+        &:not(:first-child){
+          box-shadow: inset .5px 0 0 0 #E5E5E5;
+        }
+
+        * {
+          color: $tab-filled-background-color;
+        }
+
+        &.is-active {
+          background-color: $tab-filled-background-color;
+          color: $tab-list-active-color;
+          border-bottom: 0px;
+
+          * {
+            color: #FFF;
+          }
+
+          &:before {
+            transform: translateY(0);
+          }
+        }
+      }
+    }
+  }
+  @each $name, $color in $tab-filled-background-colors {
+    .tab-list-#{$name}{
+      box-shadow: $tab-filled-list-shadow;
+      ul{
+        li{
+          color: #{$color};
+          border-bottom: 0;
+
+          &:before {
+            border-bottom:6px solid #FFF;
+          }
+
+          &:not(:first-child){
+            box-shadow: inset .5px 0 0 0 #E5E5E5;
+          }
+
+          * {
+            color: #{$color};
+          }
+
+          &.is-active {
+            background-color: #{$color};
+            color: $tab-list-active-color;
+            border-bottom: 0px;
+
+            * {
+              color: #FFF;
+            }
+
+            &:before {
+              transform: translateY(0);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//underline
+.tabs-underline{
+
+  // tab list
+  .tab-list {
+    @include unselectable;
+    position: relative;
+    height: 3.375rem;
+    color: $tab-list-color;
+    box-shadow: $tab-list-shadow;
+
+    ul {
+
+      li {
+        border-bottom: 0;
+
+        * {
+          color: $tab-list-color;
+        }
+
+        &:before{
+          content: none;
+        }
+        // &:hover,
+        // &:active,
+        &.is-active {
+          color: $tab-underline-color;
+
+          * {
+            color: $tab-underline-color;
+          }
+
+        }
+      }
+    }
+
+    .tabs-default-bar-underline{
+      position: absolute;
+      bottom: 0;
+      border: 1px solid $tab-underline-color;
+      transition: left $tab-underline-easing-in-out $tab-underline-effect-duration;
+    }
+  }
+
+  @each $name, $color in $tab-underline-colors{
+    .tab-list-#{$name} {
+      @include unselectable;
+      position: relative;
+      height: 3.375rem;
+      color: $tab-list-color;
+      box-shadow: $tab-list-shadow;
+
+      ul {
+
+        li {
+          border-bottom: 0;
+
+          * {
+            color: $tab-list-color;
+          }
+
+          &:before{
+            content: none;
+          }
+          // &:hover,
+          // &:active,
+          &.is-active {
+            color: #{$color};
+
+            * {
+              color: #{$color};
+            }
+
+          }
+        }
+      }
+
+      .tabs-default-bar-underline{
+        position: absolute;
+        bottom: 0;
+        border: 1px solid #{$color};
+        transition: left $tab-underline-easing-in-out $tab-underline-effect-duration;
+      }
+    }
+  }
+  // tab panel
+  .tab-content {
+    height: auto;
+
+    .tab-pane {
+      display: none;
+
+      &.is-active {
+        display: block
+      }
+    }
+  }
+}
+

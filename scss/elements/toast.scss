@@ -1,0 +1,41 @@
+$toastPrefixCls: 'ym-toast';
+
+.#{$toastPrefixCls} {
+  position: fixed;
+  width: 100%;
+  z-index: 1024;
+  font-size: $size-normal;
+  text-align: center;
+
+  > span {
+    max-width: 50%;
+  }
+
+  &.#{$toastPrefixCls}-mask{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    top: 0;
+  }
+
+  &.#{$toastPrefixCls}-nomask {
+    position: fixed;
+    max-width: 70%;
+    width: auto;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  &-notice-content {
+    .toast-content{
+      padding: .625rem .875rem;
+      line-height: 1;
+      border-radius: .25rem;
+      color: #FFF;
+      background-color: rgba(64,64,64,.85);
+    }
+  }
+}

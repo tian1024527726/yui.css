@@ -1,0 +1,146 @@
+$modalPrefixCls: 'ym-modal';
+// variables
+$modal-content-background-color: #FFFFFF;
+$modal-content-font-size: $size-normal;
+$modal-content-text-color: #666666;
+$modal-title-text-color: #4A4A4A;
+$modal-footer-text-color: #4A4A4A;
+$modal-footer-active-text-color: $primary;
+$modal-border-color: #E5E5E5;
+$modal-footer-button-active-background-color: #E5E5E5;
+
+.#{$modalPrefixCls} {
+  @include unselectable;
+  position: relative;
+  font-family: $family-sans-serif;
+  &:not(.#{$modalPrefixCls}-transparent):not(.#{$modalPrefixCls}-popup) {
+    width: 100%;
+    height: 100%;
+  }
+
+  &-mask {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    z-index: 1023;
+    background-color:rgba(0, 0, 0, 0.4);
+
+    &-hidden {
+      display: none;
+    }
+  }
+
+  &-wrap {
+    position: fixed;
+    overflow: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    z-index: 1024;
+    -webkit-overflow-scrolling: touch;
+    outline: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateZ(1px);
+    &-popup {
+      display: block;
+    }
+  }
+
+  &-transparent {
+    width: 70%;
+    .#{$modalPrefixCls}-content {
+      border-radius: .5rem;
+
+      .#{$modalPrefixCls}-body {
+        padding: 1rem;
+      }
+    }
+  }
+
+  &-popup {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    &-slide-down {
+      top: 0;
+    }
+
+    &-slide-up {
+      bottom: 0;
+    }
+  }
+
+  &-title {
+    margin-top: 1rem;
+    font-size: 1rem;
+    line-height: 1;
+    color: $modal-title-text-color;
+    text-align: center;
+  }
+
+  &-header {
+  }
+
+  &-footer {
+    text-align: center;
+  }
+
+  &-button-group-normal{
+    @include flex;
+    height: 3.375rem;
+    font-size: 1rem;
+    >div{
+      @include flex;
+      align-items: center;
+      justify-content: center;
+      color: $modal-footer-active-text-color;
+      height: 100%;
+    }
+  }
+  &-button-group-h,
+  &-button-group-v{
+    border-top: 1px solid  $modal-border-color;
+  }
+  &-button-group-h{
+    >div{
+      color: $modal-footer-text-color;
+      &:not(:first-child){
+        border-left: 1px solid $modal-border-color;
+        color: $modal-footer-active-text-color;
+      }
+    }
+  }
+
+  &-button-group-v{
+
+  }
+
+  &-button-active{
+    background-color: $modal-footer-button-active-background-color;
+  }
+
+  &-content {
+    position: relative;
+    background-color: $modal-content-background-color;
+    border: 0;
+    background-clip: padding-box;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  &-body {
+    font-size: $modal-content-font-size;
+    color: $modal-content-text-color;
+    height: 100%;
+    line-height: 1.5;
+    overflow: hidden;
+  }
+}

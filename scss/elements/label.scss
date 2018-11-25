@@ -1,0 +1,39 @@
+/* Variables */
+
+$label-color: $grey-light !default;
+$label-size: $size-normal !default;
+$label-weight: $weight-normal !default;
+$label-line-height: 1.5 !default;
+$label-sizes: ("large": $size-4, "medium": $size-5, "small": $size-7);
+
+.label {
+  color: $label-color;
+  font-size: $label-size;
+  font-weight: $label-weight;
+  line-height: $label-line-height;
+  word-break: break-word;
+
+  /* Sizes */
+  @each $name, $size in $label-sizes {
+    &.is-#{$name} {
+      font-size: $size;
+    }
+  }
+
+  /* Colors */
+  @each $name, $pair in $colors {
+    &.is-#{$name} {
+      color: nth($pair, 1);
+    }
+  }
+
+  @each $name, $color in $shades {
+    &.is-#{$name} {
+      color: $color;
+    }
+  }
+
+  a {
+    font-size: inherit;
+  }
+}

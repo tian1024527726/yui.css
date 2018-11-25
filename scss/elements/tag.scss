@@ -1,0 +1,133 @@
+$tag-background-color: transparent !default;
+$tag-border-color: $white !default;
+$tag-color: $white !default;
+$tag-radius: $radius-tiny !default;
+
+$tag-colors: ("info": ($info, $info-invert), "success": ($success, $success-invert), "warning": ($warning, $warning-invert), "danger": ($danger, $danger-invert)) !default;
+
+.tags {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  .tag {
+    margin-bottom: 0.25rem;
+
+    &:not(:last-child) {
+      margin-right: 0.5rem;
+    }
+  }
+
+  &:last-child {
+    margin-bottom: -0.25rem;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 0.5rem;
+  }
+
+  &.has-addons {
+    .tag {
+      margin-right: 0;
+
+      &:not(:first-child) {
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+      }
+
+      &:not(:last-child) {
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
+      }
+    }
+  }
+
+  &.is-centered {
+    justify-content: center;
+    .tag {
+      margin-right: 0.25rem;
+      margin-left: 0.25rem;
+    }
+  }
+
+  &.is-right {
+    justify-content: flex-end;
+
+    .tag {
+      &:not(:first-child) {
+        margin-left: 0.25rem;
+      }
+
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.tag:not(body) {
+  align-items: center;
+  background-color: $tag-background-color;
+  border: 1px solid $tag-border-color;
+  border-radius: $tag-radius;
+  color: $tag-color;
+  display: inline-flex;
+  font-size: $size-small;
+  line-height: 1;
+  justify-content: center;
+  padding: 0.25rem 0.625rem;
+  white-space: nowrap;
+  cursor: default;
+
+  /* Colors */
+  @each $name, $pair in $tag-colors {
+    $color: nth($pair, 1);
+    $color-invert: nth($pair, 2);
+
+    &.is-#{$name} {
+      border-color: $color;
+      color: $color;
+
+      &.is-filled {
+        background-color: $color;
+        color: $color-invert;
+      }
+    }
+  }
+
+  /* Sizes */
+  &.is-medium {
+    font-size: $size-normal;
+    padding-left: 0.375rem;
+    padding-right: 0.375rem;
+  }
+
+  &.is-large {
+    font-size: $size-medium;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .icon {
+    &:first-child:not(:last-child) {
+      margin-left: -0.375em;
+      margin-right: 0.1875em;
+    }
+
+    &:last-child:not(:first-child) {
+      margin-left: 0.1875em;
+      margin-right: -0.375em;
+    }
+
+    &:first-child:last-child {
+      margin-left: -0.375em;
+      margin-right: -0.375em;
+    }
+  }
+
+  /* Modifiers */
+  &.is-rounded {
+    border-radius: $radius-rounded;
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "yzt.css.alpha",
+  "version": "0.1.8",
+  "author": "github/tian1024527726",
+  "description": "OneConnect CSS framework",
+  "main": "index.scss",
+  "devDependencies": {
+    "autoprefixer": "^7.1.1",
+    "node-sass": "^4.5.3",
+    "postcss-cli": "^4.1.0",
+    "rimraf": "^2.6.1"
+  },
+  "scripts": {
+    "build": "npm run clean && npm run compile && npm run autoprefix",
+    "autoprefix": "postcss --use autoprefixer --map false --output css/yzt.css css/yzt.css",
+    "clean": "rimraf css",
+    "compile": "node-sass --output-style expanded --source-map true index.scss css/yzt.css",
+    "start": "npm run compile -- --watch"
+  },
+  "files": [
+    "yzt",
+    "fonts",
+    "css",
+    "scss"
+  ],
+  "license": "MIT"
+}

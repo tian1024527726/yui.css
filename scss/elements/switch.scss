@@ -1,0 +1,86 @@
+/* Varible */
+$switch-duration: .36s;
+$switch-inner-size: $size-normal !default;
+$switch-background-color: $primary !default;
+$ease-in-out-circ: cubic-bezier(0.78, 0.14, 0.15, 0.86);
+$switch-disabled-opacity: .4;
+$disabled-color: rgba(0,0,0,.25);
+
+$switch-size-xs: .75rem !default;
+$switch-size-s: 0.875rem !default;
+$switch-size-m: 1.25rem !default;
+$switch-size-l: 1.5rem !default;
+$switch-size-xl: 1.75rem !default;
+$switch-size-xxl: 1.875rem !default;
+$switch-size-xxxl: 2rem !default;
+$switch-sizes: ("xxxl": $switch-size-xxxl, "xxl": $switch-size-xxl,"xl": $switch-size-xl,"l": $switch-size-l, "m": $switch-size-m, "s": $switch-size-s, "xs": $switch-size-xs);
+
+
+.switch {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  font-size: $size-medium;
+  height: 1.6em;
+  min-width: 3.25em;
+  line-height: 1.5em;
+  vertical-align: middle;
+  border-radius: $radius-rounded;
+  border: 1px solid transparent;
+  background-color: $disabled-color;
+  cursor: pointer;
+  transition: all $switch-duration;
+  user-select: none;
+  @each $name,$size in $switch-sizes{
+    &.is-#{$name}{
+      font-size: $size;
+    }
+  }
+  &:after {
+    position: absolute;
+    width: 1.3em;
+    height: 1.3em;
+    left: 1px;
+    top: 50%;
+    transform: translate(0,-50%);
+    border-radius: 100%;
+    background-color: #fff;
+    content: " ";
+    cursor: pointer;
+    transition: all $switch-duration $ease-in-out-circ;
+  }
+
+  &:after {
+    box-shadow: 0 2px 4px 0 rgba(0, 35, 11, .2);
+  }
+
+  &:active:after {
+    width: 1.5em;
+  }
+
+  &.is-active{
+    color: $switch-background-color;
+    background-color: $switch-background-color;
+
+    &:after {
+      left: 100%;
+      margin-left: -1.3em;
+      margin-left: calc(-1.3em - 1px);
+    }
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 2px fade($switch-background-color, 20%);
+    outline: 0;
+  }
+
+  &:focus:hover {
+    box-shadow: none;
+  }
+
+  &.is-disabled {
+    pointer-events: none;
+    opacity: $switch-disabled-opacity;
+  }
+}
+

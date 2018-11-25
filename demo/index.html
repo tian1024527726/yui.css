@@ -1,0 +1,750 @@
+<head>
+  <meta charset="utf-8" />
+  <meta name="renderer" content="webkit|ie-comp" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+  <title>OCUI DEMO</title>
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <link rel="stylesheet" type="text/css" href="../css/yzt.css">
+</head>
+<body>
+  <div id="demo-affix" class="demo-affix"></div>
+
+  <!-- Label demo start -->
+
+  <section class="demo-section">
+    <h2 class="title">Label</h2>
+    <h3 class="label">文本内容标签</h3>
+    <hr>
+    <div class="demo-content">
+      <div>
+        <h3 class="title is-4">适用</h3>
+        <p>
+          <code>.label</code> 建议使用于以下标签做文字展示所用
+          <ul class="demo-list">
+            <li>
+              <code>&lt;span&gt;</code> 行内的文字展示
+            </li>
+            <li>
+              <code>&lt;p&gt;</code> 分段文字展示
+            </li>
+          </ul>
+        </p>
+      </div>
+      <div>
+        <span class="label">这是一行说明文字</span>
+        <p class="label">这是一大段说明文字这是一大段说明文字这是一大段说明文字这是一大段说明文字这是一大段说明文字这是一大段说明文字</p>
+      </div>
+    </div>
+    <hr>
+    <div class="demo-content">
+      <div>
+        <h3 class="title is-4">尺寸</h3>
+        <p>
+          <code>.label</code> 有以下几种尺寸样式供配合使用
+          <ul class="demo-list">
+            <li>
+              <code>&lt;class="lable is-large"&gt;</code> 大尺寸文字内容
+            </li>
+            <li>
+              <code>&lt;class="lable is-medium"&gt;</code> 中尺寸文字内容
+            </li>
+            <li>
+              <code>&lt;class="lable"&gt;</code> 默认尺寸文字内容
+            </li>
+            <li>
+              <code>&lt;class="lable is-small"&gt;</code> 小尺寸文字内容
+            </li>
+          </ul>
+        </p>
+      </div>
+      <div>
+        <p class="label is-large">Large font-size=1.125rem 基准 18px</p>
+        <p class="label is-medium">Medium font-size=1.125rem 基准 16px</p>
+        <p class="label">Normal (Default) font-size=0.875rem 基准 14px</p>
+        <p class="label is-small">Small font-size=0.75rem 基准 12px</p>
+      </div>
+    </div>
+    <hr>
+    <div class="demo-content">
+      <div>
+        <h3 class="title is-4">颜色</h3>
+        <p>
+          <code>.label</code> 有多种颜色样式可配合使用
+          <ul class="demo-list">
+            <li>
+              按颜色标注：
+              <code>.is-white</code>
+              <code>.is-black</code>
+              <code>.is-light</code>
+              <code>.is-darker</code>
+            </li>
+            <li>
+              按功能标注：
+              <code>.is-primary</code>
+              <code>.is-info</code>
+              <code>.is-link</code>
+              <code>.is-warning</code>
+              <code>.is-danger</code>
+              <code>.is-success</code>
+            </li>
+          </ul>
+        </p>
+      </div>
+      <div>
+        <span class="label">Default</span>
+        <span class="label is-white">White</span>
+        <span class="label is-black">Black</span>
+        <span class="label is-light">Light</span>
+        <span class="label is-dark">Dark</span>
+        <br>
+        <span class="label is-primary">Primary</span>
+        <span class="label is-info">Info</span>
+        <span class="label is-link">Link</span>
+        <span class="label is-warning">Warning</span>
+        <span class="label is-danger">Danger</span>
+        <span class="label is-success">Success</span>
+      </div>
+    </div>
+    <hr>
+    <div class="demo-content">
+      <div>
+        <h3 class="title is-4">其他</h3>
+        <p>
+          <code>.label</code> 样式的元素内嵌 <code>&lt;a&gt;</code> 标签时，将保留原视觉交互效果
+        </p>
+      </div>
+      <div>
+        <p class="label">点击 <a>主页</a> 返回</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Label demo end -->
+  <hr>
+  <!-- Title demo start -->
+
+  <section class="demo-section">
+    <h2 class="title">Title</h2>
+    <h3 class="label">视觉比重较大的标题类文字</h3>
+    <hr>
+    <div class="demo-content">
+      <div>
+        <h3 class="title is-4">适用</h3>
+        <p>
+          <code>.title</code> 建议使用于 <code>&lt;h1&gt;</code> ... <code>&lt;h6&gt;</code> 等标签
+        </p>
+      </div>
+      <div>
+        <h1 class="title">短期意外伤害保险</h1>
+        <h2 class="title is-4">全面满足短期工作保障需求</h1>
+      </div>
+    </div>
+    <hr>
+    <div class="demo-content">
+      <div>
+        <h3 class="title is-4">尺寸</h3>
+        <p>
+          <code>.title</code> 有以下6种尺寸样式供配合使用，即 <code>.is-1</code> ... <code>.is-6</code>
+        </p>
+      </div>
+      <div>
+        <h1 class="title is-1">Size-1  <span class="label">3rem 基准 48px</span></h1>
+        <h1 class="title is-2">Size-2  <span class="label">2.375rem 基准 38px</span></h1>
+        <h1 class="title">Size-3 (Default)  <span class="label">1.5rem 基准 24px</span></h1>
+        <h1 class="title is-4">Size-4  <span class="label">1.125rem 基准 18px</span></h1>
+        <h1 class="title is-5">Size-4  <span class="label">1rem 基准 16px</span></h1>
+        <h1 class="title is-6">Size-4  <span class="label">0.875rem 基准 14px</span></h1>
+      </div>
+    </div>
+    <hr>
+    <div class="demo-content">
+      <div>
+        <h3 class="title is-4">颜色</h3>
+        <p>
+          目前提供两种颜色样式配合 <code>.title</code> 使用，分别是：
+          <ul class="demo-list">
+            <li>黑色<code>.is-black</code></li>
+            <li>白色<code>.is-white</code></li>
+          </ul>
+          默认的颜色是黑灰色。
+        </p>
+      </div>
+      <div>
+        <h1 class="title is-white">短期意外伤害保险</h1>
+        <h2 class="title is-4 is-white">全面满足短期工作保障需求</h1>
+        <br>
+        <h1 class="title is-black">短期意外伤害保险</h1>
+        <h2 class="title is-4 is-black">全面满足短期工作保障需求</h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- Title demo end -->
+  <hr>
+  <!-- Icon demo start -->
+
+  <section class="demo-section">
+    <h2 class="title">Icon</h2>
+    <h3 class="label">图标</h3>
+    <hr>
+    <div class="demo-content">
+      <div>
+        <h3 class="title is-4">适用</h3>
+        <p>
+          为灵活兼容多套iconfont库，<code>.icon</code> 仅会控制行内元素的尺寸和颜色
+        </p>
+        <p>
+          具体显示内容需内嵌<code>&lt;i&gt;</code> 标签使用
+        </p>
+      </div>
+      <div>
+        <span class="icon">
+          <i class="yztIcon yzt-icon-keyboard-close"></i>
+        </span>
+        <span class="icon">
+          <i class="yztIcon icon-GammaHorse"></i>
+        </span>
+      </div>
+    </div>
+    <hr>
+    <div class="demo-content">
+      <div>
+        <h3 class="title is-4">尺寸</h3>
+        <p>
+          <code>.icon</code> 有以下几种尺寸样式供配合使用
+          <ul class="demo-list">
+            <li>
+              <code>&lt;class="icon is-large"&gt;</code> 大尺寸图标
+            </li>
+            <li>
+              <code>&lt;class="icon is-medium"&gt;</code> 中等尺寸图标
+            </li>
+            <li>
+              <code>&lt;class="icon"&gt;</code> 默认尺寸图标
+            </li>
+            <li>
+              <code>&lt;class="icon is-small"&gt;</code> 小尺寸图标
+            </li>
+          </ul>
+        </p>
+      </div>
+      <div>
+        <span class="icon is-large">
+          <i class="yztIcon yzt-icon-keyboard-close"></i>
+        </span>
+        <span class="icon is-medium">
+          <i class="yztIcon yzt-icon-keyboard-close"></i>
+        </span>
+        <span class="icon">
+          <i class="yztIcon yzt-icon-keyboard-close"></i>
+        </span>
+        <span class="icon is-small">
+          <i class="yztIcon yzt-icon-keyboard-close"></i>
+        </span>
+      </div>
+    </div>
+    <hr>
+    <div class="demo-content">
+      <div>
+        <h3 class="title is-4">颜色</h3>
+        <p>
+          与 <code>Label</code> 类似 <code>.icon</code> 也有多种颜色样式可配合使用
+          <ul class="demo-list">
+            <li>
+              按颜色标注：
+              <code>.is-white</code>
+              <code>.is-black</code>
+              <code>.is-light</code>
+              <code>.is-darker</code>
+            </li>
+            <li>
+              按功能标注：
+              <code>.is-primary</code>
+              <code>.is-info</code>
+              <code>.is-link</code>
+              <code>.is-warning</code>
+              <code>.is-danger</code>
+              <code>.is-success</code>
+            </li>
+          </ul>
+        </p>
+      </div>
+      <div>
+        <span class="icon">
+          <i class="yztIcon yzt-icon-keyboard-close"></i>
+        </span>
+        <span class="icon is-white">
+          <i class="yztIcon yzt-icon-keyboard-close"></i>
+        </span>
+        <span class="icon is-black">
+          <i class="yztIcon yzt-icon-keyboard-close"></i>
+        </span>
+        <span class="icon is-light">
+          <i class="yztIcon yzt-icon-keyboard-close"></i>
+        </span>
+        <span class="icon is-dark">
+          <i class="yztIcon yzt-icon-keyboard-close"></i>
+        </span>
+        <br>
+        <span class="icon is-primary">
+          <i class="yztIcon yzt-icon-keyboard-close"></i>
+        </span>
+        <span class="icon is-info">
+          <i class="yztIcon yzt-icon-keyboard-close"></i>
+        </span>
+        <span class="icon is-link">
+          <i class="yztIcon yzt-icon-keyboard-close"></i>
+        </span>
+        <span class="icon is-warning">
+          <i class="yztIcon yzt-icon-keyboard-close"></i>
+        </span>
+        <span class="icon is-danger">
+          <i class="yztIcon yzt-icon-keyboard-close"></i>
+        </span>
+        <span class="icon is-success">
+          <i class="yztIcon yzt-icon-keyboard-close"></i>
+        </span>
+      </div>
+    </div>
+    <hr>
+    <div class="demo-content">
+      <div>
+        <h3 class="title is-4">其他</h3>
+        <p>
+          由于 <code>.icon</code> 使用了iconfont的fontclass以灵活搭配字体库
+        </p>
+        <p>
+          因此某些非标准尺寸的icon会出现诡异的显示方式，如右图
+        </p>
+      </div>
+      <div>
+        <span class="icon is-success">
+          <i class="yztIcon yzt-icon-keyboard-close"></i>
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Icon demo end -->
+  <hr>
+  <!-- Tag demo start -->
+
+  <section class="demo-section">
+    <h2 class="title">Tag</h2>
+    <h3 class="label">小标签</h3>
+    <hr>
+    <div class="demo-content">
+      <div>
+        <h3 class="title is-4">适用</h3>
+        <p>
+          <code>.tag</code> 建议使用于 <code>&lt;span&gt;</code> 元素做小标签的展示
+        </p>
+        <p>
+          <code>.tags</code> 建议使用于 <code>&lt;section&gt;, &lt;div&gt;</code> 等元素做成组的小标签展示
+        </p>
+      </div>
+      <div>
+        <span class="tag">单个标签</span>
+        <p class="tags">
+          <span class="tag">标签1</span>
+          <span class="tag">标签2</span>
+          <span class="tag">标签3</span>
+        </p>
+      </div>
+    </div>
+    <hr>
+    <div class="demo-content">
+      <div>
+        <h3 class="title is-4">尺寸</h3>
+        <p>
+          <code>.tag</code> 有以下三种尺寸样式供配合使用
+          <ul class="demo-list">
+            <li>
+              <code>&lt;class="tag"&gt;</code> 默认尺寸
+            </li>
+            <li>
+              <code>&lt;class="tag is-medium"&gt;</code> 中尺寸
+            </li>
+            <li>
+              <code>&lt;class="tag is-large"&gt;</code> 大尺寸
+            </li>
+          </ul>
+        </p>
+      </div>
+      <div class="tags">
+        <span class="tag">Default</span>
+        <span class="tag is-medium">Medium</span>
+        <span class="tag is-large">Large</span>
+      </div>
+    </div>
+    <hr>
+    <div class="demo-content">
+      <div>
+        <h3 class="title is-4">颜色</h3>
+        <p>
+          有四种颜色样式供不同场景下配合使用
+          <ul class="demo-list">
+            <li><code>.is-info</code></li>
+            <li><code>.is-warning</code></li>
+            <li><code>.is-success</code></li>
+            <li><code>.is-danger</code></li>
+          </ul>
+          以上样式可结合 <code>.is-filled</code> 使用，填充标签内部
+        </p>
+      </div>
+      <div>
+        <p class="tags">
+          <span class="tag is-info">Info</span>
+          <span class="tag is-warning">Warning</span>
+          <span class="tag is-success">Success</span>
+          <span class="tag is-danger">Danger</span>
+        </p>
+        <p class="tags">
+          <span class="tag is-info is-filled">Info</span>
+          <span class="tag is-warning is-filled">Warning</span>
+          <span class="tag is-success is-filled">Success</span>
+          <span class="tag is-danger is-filled">Danger</span>
+        </p>
+      </div>
+    </div>
+    <hr>
+    <div class="demo-content">
+      <div>
+        <h3 class="title is-4">其他</h3>
+        <p>
+          <code>.tag</code> 配合 <code>.is-rounded</code> 可以让小标签变成弧形边框
+        </p>
+        <p>
+          <code>.tags</code> 配合 <code>.is-centered</code> 或 <code>.is-right</code> 可以改变小标签的排列方向
+        </p>
+      </div>
+      <div>
+        <span class="tag is-rounded">Rounded</span>
+        <p class="tags is-centered">
+          <span class="tag">标签1</span>
+          <span class="tag">标签2</span>
+          <span class="tag">标签3</span>
+        </p>
+        <p class="tags is-right">
+          <span class="tag">标签1</span>
+          <span class="tag">标签2</span>
+          <span class="tag">标签3</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tag demo end -->
+  <hr>
+  <!-- Button demo start -->
+
+  <section class="demo-section">
+    <h2 class="title">Button</h2>
+    <h3 class="label">基础交互组件按钮</h3>
+    <hr>
+    <div class="demo-content">
+      <div>
+        <h3 class="title is-4">适用</h3>
+        <p>
+          <code>.button</code> 与以下标签配合使用均可实现按钮视觉和交互效果
+          <ul class="demo-list">
+            <li>
+              <code>&lt;a&gt;</code> 和 <code>&lt;button&gt;</code> 标签
+            </li>
+            <li>
+              <code>&lt;input type="submit"&gt;</code> 和 <code>&lt;input type="reset"&gt;</code> 等标签
+            </li>
+          </ul>
+        </p>
+      </div>
+      <div>
+        <a class="button">返回</a>
+        <button class="button">确认</button>
+        <input type="submit" class="button"></input>
+        <input type="reset" class="button"></input>
+      </div>
+    </div>
+    <hr>
+    <div class="demo-content">
+      <div>
+        <h3 class="title is-4">尺寸</h3>
+        <p>
+          按钮的尺寸目前只有默认尺寸和小尺寸 <code>&lt;.is-small&gt;</code> 两种
+        </p>
+        <p>
+          但在宽度上可配合 <code>&lt;.is-fullwidth&gt;</code> 使用
+        </p>
+      </div>
+      <div>
+        <p>
+          <a class="button is-small">小尺寸</a>
+          <a class="button">默认尺寸</a>
+        </p>
+        <p style="width: 375px;">
+          <a class="button is-fullwidth">底部全宽度按钮</a>
+        </p>
+      </div>
+    </div>
+    <hr>
+    <div class="demo-content">
+      <div>
+        <h3 class="title is-4">颜色</h3>
+        <p>
+          按钮目前按操作类别分为两类交互效果，分别为
+          <ul class="demo-list">
+            <li>主要操作：<code>.is-primary</code></li>
+            <li>次要操作：<code>.is-secondary</code></li>
+          </ul>
+        </p>
+        <p>
+          按钮在不同状态下也会基于以上两类，对以下状态发生视觉效果的改变
+          <ul class="demo-list">
+            <li>鼠标悬停时，或被添加 <code>class=".is-hovered"</code></li>
+            <li>按钮被点击，或被添加 <code>class=".is-active"</code></li>
+            <li>点击后状态，或被添加 <code>class=".is-loading"</code></li>
+            <li>以及按钮被禁用状态</li>
+          </ul>
+        </p>
+      </div>
+      <div>
+        <p style="display: inline-block; width: 49%;">
+          <a class="button is-primary is-fullwidth">主要操作 normal</a>
+        </p>
+        <p style="display: inline-block; width: 49%;">
+          <a class="button is-secondary is-fullwidth ">次要操作 normal</a>
+        </p>
+        <p style="display: inline-block; width: 49%;">
+          <a class="button is-primary is-active is-fullwidth">主要操作 active</a>
+        </p>
+        <p style="display: inline-block; width: 49%;">
+          <a class="button is-secondary is-active is-fullwidth">次要操作 active</a>
+        </p>
+        <p style="display: inline-block; width: 49%;">
+          <a class="button is-primary is-loading is-fullwidth">主要操作 disable</a>
+        </p>
+        <p style="display: inline-block; width: 49%;">
+          <a class="button is-secondary is-loading is-fullwidth">次要操作 disable</a>
+        </p>
+        <p style="display: inline-block; width: 49%;">
+          <a class="button is-primary is-fullwidth" disabled>主要操作 disable</a>
+        </p>
+        <p style="display: inline-block; width: 49%;">
+          <a class="button is-secondary is-fullwidth" disabled>次要操作 disable</a>
+        </p>
+        <p style="display: inline-block; width: 49%;">
+          <a class="button is-primary is-small">按钮</a>
+          <a class="button is-primary is-small is-active">按钮</a>
+          <a class="button is-primary is-small is-loading">按钮</a>
+          <a class="button is-primary is-small" disabled>按钮</a>
+        </p>
+        <p style="display: inline-block; width: 49%;">
+          <a class="button is-secondary is-small">按钮</a>
+          <a class="button is-secondary is-small is-active">按钮</a>
+          <a class="button is-secondary is-small is-loading">按钮</a>
+          <a class="button is-secondary is-small" disabled>按钮</a>
+        </p>
+      </div>
+    </div>
+
+  <!-- Button demo end -->
+  <hr>
+  <!-- List demo start -->
+
+  <section class="demo-section">
+    <h2 class="title">List</h2>
+    <h3 class="label">列表</h3>
+    <hr>
+    <div class="demo-content">
+      <div>
+        <h3 class="title is-4">适用</h3>
+        <p>
+          列表为常见的手机端数据展示、编辑样式
+        </p>
+        <p>
+          具体显示内容需内嵌<code>&lt;div class="input"&gt;</code> 等标签和样式使用
+        </p>
+      </div>
+      <div class="mobile-demo">
+        <div class="list">
+          <header>被保人信息(请填写儿童监护人信息)</header>
+          <div class="list-body">
+            <div class="list-item">
+              <div class="input has-prepend">
+                <input type="input" name="username" />
+                <span class="icon is-medium prepend">
+                  <i class="yztIcon icon-user"></i>
+                </span>
+              </div>
+            </div>
+            <div class="list-item">
+              <div class="input">
+                <label class="is-4">姓名</label>
+                <input type="input" name="name" placeholder="请输入姓名" />
+              </div>
+            </div>
+            <div class="list-item">
+              <div class="input" disabled>
+                <label class="is-4">证件类型</label>
+                <input type="input" name="idType" value="禁止输入" disabled />
+              </div>
+            </div>
+            <div class="list-item">
+              <div class="input">
+                <label class="is-4">证件号码</label>
+                <input type="input" name="idCode" />
+              </div>
+            </div>
+            <div class="list-item">
+              <div class="input has-append">
+                <label class="is-4">金额输入</label>
+                <input class="has-text-right" type="input" name="money" />
+                <span class="append">￥</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- List demo end -->
+  <hr>
+  <!-- Tab demo start -->
+
+  <section class="demo-section">
+    <h2 class="title">Tabs</h2>
+    <h3 class="label">标签页</h3>
+    <hr>
+    <div class="demo-content">
+      <div>
+        <h3 class="title is-4">适用</h3>
+        <p>
+          <code>.tabs</code> <code>.tab-list</code> <code>.tab-content</code> 等三个标签页样式用于构建可切换的标签页
+        </p>
+        <p>
+          在 <code>.tab-list</code> 容器中需使用ul元素作为标签切换列表
+        </p>
+        <p>
+          <code>&lt;li class="is-active"&gt;</code> 可切换选中标签的样式
+        </p>
+      </div>
+      <div>
+        <div class="tabs">
+          <div class="tab-list">
+            <ul>
+              <li class="is-active">
+                <div class="label is-small">
+                  <p>7日年化收益率</p>
+                  <p>4.0290%</p>
+                </div>
+              </li>
+              <li>
+                <div class="label is-small">
+                  <p>万份收益</p>
+                  <p>1.0581元</p>
+                </div>
+              </li>
+              <li>
+                <div class="label is-small">其他信息</div>
+              </li>
+            </ul>
+          </div>
+          <div class="tab-content">
+            <div class="tab-pane is-active">
+              7日年化
+            </div>
+            <div class="tab-pane">
+              万份收益
+            </div>
+            <div class="tab-pane">
+              其他信息
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tab demo end -->
+  <hr>
+  <!-- Segment demo start -->
+
+  <section class="demo-section">
+    <h2 class="title">Segments</h2>
+    <h3 class="label">分割器</h3>
+    <hr>
+    <div class="demo-content">
+      <div>
+        <h3 class="title is-4">适用</h3>
+        <p>
+          <code>.segments</code> <code>.segment</code> 样式用于构建可切换选项的分割器
+        </p>
+        <p>
+          <code>&lt;div class="segment is-active"&gt;</code> 可切换选中标签的样式
+        </p>
+      </div>
+      <div style="background-color: white">
+        <div class="segments">
+          <div class="segment is-active">Segment1</div>
+          <div class="segment">Loooooooooong 2</div>
+          <div class="segment">Segment3</div>
+          <div class="segment">Short 4</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Segments demo end -->
+  <hr>
+  <!-- Numeric Keyboard demo start -->
+
+  <section class="demo-section">
+    <h2 class="title">Numeric Keyboard</h2>
+    <h3 class="label">数字键盘</h3>
+    <hr>
+    <div class="demo-content">
+      <div>
+        <h3 class="title is-4">适用</h3>
+        <p>
+          <code>.checkbox</code> <code>.segment</code> 样式用于构建可切换选项的分割器
+        </p>
+        <p>
+          <code>&lt;div class="segment is-active"&gt;</code> 可切换选中标签的样式
+        </p>
+      </div>
+      <div>
+        <iframe src="./pages/numeric-keyboard.html"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Numeric Keyboard demo end -->
+  <hr>
+  <!-- Numeric Keyboard demo start -->
+
+  <section class="demo-section">
+    <h2 class="title">Flow</h2>
+    <h3 class="label">流程跟踪</h3>
+    <hr>
+    <div class="demo-content">
+      <div>
+        <h3 class="title is-4">适用</h3>
+        <p>
+          <code>.checkbox</code> <code>.segment</code> 样式用于构建可切换选项的分割器
+        </p>
+        <p>
+          <code>&lt;div class="segment is-active"&gt;</code> 可切换选中标签的样式
+        </p>
+      </div>
+      <div>
+        <iframe src="./pages/flow.html"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Numeric Keyboard demo end -->
+
+  <script src="./libs/jquery-3.3.1.min.js"></script>
+  <script src="./libs/index.js"></script>
+</body>

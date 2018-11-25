@@ -1,0 +1,24 @@
+// Variables
+$link-size: $size-normal !default;
+$link-color: $link !default;
+$link-hover-color: $link-hover !default;
+$link-sizes: ("large": $size-4, "medium": $size-5, "small": $size-7);
+
+.link {
+  @include unselectable;
+  color: $link-color;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: $link-size;
+
+  // Sizes
+  @each $name, $size in $link-sizes {
+    &.is-#{$name} {
+      font-size: $size;
+    }
+  }
+
+  &:hover {
+    color: $link-hover-color;
+  }
+}

@@ -1,0 +1,66 @@
+// Typography
+
+$family-sans-serif: "PingFangSC-Regular", "SFUIText-Medium", "Microsoft YaHei", BlinkMacSystemFont, "Arial", sans-serif !default;
+$family-monospace:  "Inconsolata", "Consolas", "Monaco", monospace !default;
+$render-mode: optimizeLegibility !default;
+
+$size-1: 3rem !default;
+$size-2: 2.375rem !default;
+$size-3: 1.5rem !default;
+$size-4: 1.125rem !default;
+$size-5: 1rem !default;
+$size-6: 0.875rem !default;
+$size-7: 0.75rem !default;
+
+$weight-light:    300 !default;
+$weight-normal:   400 !default;
+$weight-semibold: 500 !default;
+$weight-bold:     700 !default;
+
+// Colors
+
+$black:        #0a0a0a !default;
+$black-bis:    #121212 !default;
+$black-ter:    #242424 !default;
+
+$grey-darker:  #363636 !default;
+$grey-dark:    #4a4a4a !default;
+$grey:         #7a7a7a !default;
+$grey-light:   #999999 !default;
+$grey-lighter: #bbbbbb !default;
+
+$white-ter:    #f5f5f5 !default;
+$white-bis:    #fafafa !default;
+$white:        #ffffff !default;
+
+$orange-1:     #FF6652 !default;
+$orange-2:     #FFA599 !default;
+
+$yellow-1:     #FF8400 !default;
+$yellow-2:     #FFAC17 !default;
+$yellow-3:     #FFCE60 !default;
+
+$green-1:      #4ECEBA !default;
+$green-2:      #C6EFE8 !default;
+
+$blue-1:       #0677da !default;
+$blue-2:       #055fae !default;
+$blue-3:       #0086FF !default;
+$blue-4:       #5EB3FF !default;
+$blue-5:       #4A90E2 !default;
+
+$purple-1:     #7768FF !default;
+$purple-2:     #D5CCFB !default;
+
+$red-1:        #FF3226 !default;
+
+// Miscellaneous
+
+$gap: 32px !default;
+$easing: ease-out !default;
+$radius-tiny: 3px !default;
+$radius-small: 4px !default;
+$radius: 5px !default;
+$radius-large: 5px !default;
+$radius-rounded: 290486px !default;
+$speed: 86ms !default;
