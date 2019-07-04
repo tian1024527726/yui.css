@@ -1,5 +1,5 @@
 {
-  "name": "yzt.css.alpha",
+  "name": "yui.css",
   "version": "0.1.8",
   "author": "github/tian1024527726",
   "description": "OneConnect CSS framework",
@@ -12,13 +12,13 @@
   },
   "scripts": {
     "build": "npm run clean && npm run compile && npm run autoprefix",
-    "autoprefix": "postcss --use autoprefixer --map false --output css/yzt.css css/yzt.css",
+    "autoprefix": "postcss --use autoprefixer --map false --output css/yui.css css/yui.css",
     "clean": "rimraf css",
-    "compile": "node-sass --output-style expanded --source-map true index.scss css/yzt.css",
+    "compile": "node-sass --output-style expanded --source-map true index.scss css/yui.css",
     "start": "npm run compile -- --watch"
   },
   "files": [
-    "yzt",
+    "yui",
     "fonts",
     "css",
     "scss"
